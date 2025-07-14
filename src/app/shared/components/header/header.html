@@ -1,0 +1,54 @@
+<div class="min-h-screen bg-gradient-to-br from-amber-50 to-amber-100/30 p-6 relative overflow-hidden">
+  <!-- Elementos decorativos de fondo -->
+  <div class="absolute -top-20 -right-20 w-64 h-64 bg-[#8B5E3C]/10 rounded-full blur-xl animate-float"></div>
+  <div class="absolute bottom-10 left-0 w-48 h-48 bg-[#8B5E3C]/15 rounded-full blur-xl animate-float-delay"></div>
+  
+  <!-- Contenedor principal -->
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <!-- Header simplificado -->
+    <header class="flex justify-between items-center mb-10">
+      <div class="flex items-center space-x-5">
+        <!-- Título estilizado -->
+        <h1 class="text-5xl font-extrabold text-[#8B5E3C] drop-shadow-lg tracking-tight"
+            style="font-family: 'Pacifico', cursive; letter-spacing: 2px;">
+          Blocly
+        </h1>
+        <!-- Badge de cantidad -->
+        <span class="ml-2 px-4 py-1.5 bg-white/70 text-[#8B5E3C] rounded-full text-base font-semibold backdrop-blur-md border border-[#8B5E3C]/30 shadow-md flex items-center gap-2">
+          <svg class="w-4 h-4 text-[#8B5E3C]" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M8 2a2 2 0 00-2 2v1H5a2 2 0 00-2 2v9a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H8zm0 2h4v1H8V4zm-3 3h10v9H5V7z"/>
+          </svg>
+          1 nota
+        </span>
+      </div>
+      
+      <!-- Botón de agregar nota -->
+      <button 
+        (click)="toggleForm()"
+        class="flex items-center px-6 py-3.5 bg-[#8B5E3C] text-white rounded-xl hover:bg-[#6F4B2F] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 active:shadow-inner cursor-pointer group"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 group-hover:rotate-90 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+        </svg>
+        <span class="font-semibold tracking-wide">Agregar Nota</span>
+      </button>
+    </header>
+
+    <!-- Contenido -->
+    <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/50 overflow-hidden">
+      <app-note-wall *ngIf="!showForm"></app-note-wall>
+      <app-note-form *ngIf="showForm" (cancel)="toggleForm()"></app-note-form>
+    </div>
+  </div>
+
+  <!-- Botón flotante -->
+  <button 
+    (click)="toggleForm()"
+    class="fixed bottom-8 right-8 z-20 w-14 h-14 bg-[#8B5E3C] text-white rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer"
+    aria-label="Agregar nota"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+    </svg>
+  </button>
+</div>

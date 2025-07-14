@@ -1,0 +1,25 @@
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-amber-50/80 to-amber-100/80 backdrop-blur-sm">
+  <div class="text-center">
+    <div class="relative inline-block mb-8">
+      <!-- Título con color sólido -->
+      <div class="text-7xl font-bold text-[#8B5E3C]"
+           style="font-family: 'Pacifico', cursive;">
+        Blocly
+      </div>
+      <!-- Efecto de brillo que se mueve (ajustado al nuevo color) -->
+      <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div class="absolute top-0 left-0 w-16 h-full bg-amber-100/50 skew-x-12 animate-shine"></div>
+      </div>
+    </div>
+    
+    <!-- Spinner personalizado en tonos café -->
+    <div class="relative w-24 h-24 mx-auto mb-8">
+      <div class="absolute inset-0 border-4 border-amber-200 rounded-full"></div>
+      <div class="absolute inset-0 border-4 border-transparent border-t-[#8B5E3C] border-r-[#8B5E3C] rounded-full animate-spin-slow"></div>
+      <div class="absolute inset-2 border-4 border-transparent border-b-amber-600 border-l-amber-600 rounded-full animate-spin-slow-reverse"></div>
+    </div>
+    
+    <!-- Mensaje con color que combina -->
+    <p class="text-xl text-[#6F4B2F] animate-pulse">{{message}}</p>
+  </div>
+</div>

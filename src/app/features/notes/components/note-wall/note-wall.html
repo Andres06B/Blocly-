@@ -1,1 +1,24 @@
-<p>note-wall works!</p>
+<div class="bg-gradient-to-br from-amber-700 to-amber-900 rounded-3xl shadow-2xl p-2 min-h-[70vh] relative overflow-hidden">
+  <!-- Elementos decorativos de fondo -->
+  <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/crisp-paper-ruffles.png')] opacity-5"></div>
+  <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#1f5c32]/10 rounded-full blur-xl"></div>
+  
+  <!-- Contenedor principal del tablero - VERDE #1f5c32 -->
+  <div class="w-full h-full bg-[#1f5c32] rounded-2xl shadow-inner border-4 border-amber-600/30 p-6 relative">
+    <!-- Título del tablero -->
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold text-amber-100 font-serif italic drop-shadow-md">Mis Notas</h2>
+      <span class="px-3 py-1 bg-amber-200/90 text-amber-900 rounded-full text-sm font-medium border border-amber-300/50 shadow-sm">
+        4 notas
+      </span>
+    </div>
+
+    <!-- Grid de notas mejorado -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-min">
+      <app-note-card class="transform hover:-translate-y-1 transition-transform duration-300 cursor-pointer hover:shadow-lg"></app-note-card>
+      <app-note-card class="transform hover:-translate-y-1 transition-transform duration-300 cursor-pointer hover:shadow-lg"></app-note-card>
+      <app-note-card class="transform hover:-translate-y-1 transition-transform duration-300 cursor-pointer hover:shadow-lg"></app-note-card>
+      <app-note-card class="transform hover:-translate-y-1 transition-transform duration-300 cursor-pointer hover:shadow-lg"></app-note-card>
+    </div>
+  </div>
+</div>
